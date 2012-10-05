@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ClearGraphicsLibrary", "..\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ModelConverter", "..\ModelConverter\ModelConverter\ModelConverter.vcxproj", "{944578DA-3F8E-4943-AFBA-C5FAB86D51D4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ClearInputLibrary", "..\ClearInputLibrary\source\ClearInputLibrary\RAWInput.vcxproj", "{DF6F21EC-0AC8-4422-9C32-83D307725896}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -89,6 +91,14 @@ Global
 		{944578DA-3F8E-4943-AFBA-C5FAB86D51D4}.PCH Debug|Win32.Build.0 = Debug|Win32
 		{944578DA-3F8E-4943-AFBA-C5FAB86D51D4}.Release|Win32.ActiveCfg = Release|Win32
 		{944578DA-3F8E-4943-AFBA-C5FAB86D51D4}.Release|Win32.Build.0 = Release|Win32
+		{DF6F21EC-0AC8-4422-9C32-83D307725896}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DF6F21EC-0AC8-4422-9C32-83D307725896}.Debug|Win32.Build.0 = Debug|Win32
+		{DF6F21EC-0AC8-4422-9C32-83D307725896}.Lib|Win32.ActiveCfg = Release|Win32
+		{DF6F21EC-0AC8-4422-9C32-83D307725896}.Lib|Win32.Build.0 = Release|Win32
+		{DF6F21EC-0AC8-4422-9C32-83D307725896}.PCH Debug|Win32.ActiveCfg = Debug|Win32
+		{DF6F21EC-0AC8-4422-9C32-83D307725896}.PCH Debug|Win32.Build.0 = Debug|Win32
+		{DF6F21EC-0AC8-4422-9C32-83D307725896}.Release|Win32.ActiveCfg = Release|Win32
+		{DF6F21EC-0AC8-4422-9C32-83D307725896}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
