@@ -61,6 +61,7 @@ robocopy "$(BLOCO_HOME)\BlocoUtility\bin\Debug"                 $(OutDir) *.dll
 robocopy "$(BLOCO_HOME)\BlocoCore\bin\Debug"                   $(OutDir) *.dll
 robocopy "$(BLOCO_HOME)\ClearPhysicsSDK\bin\Debug"        $(OutDir) *.dll
 robocopy "$(BLOCO_HOME)\ClearGraphicsLibrary\bin\Debug" $(OutDir) *.dll
+robocopy "$(BLOCO_HOME)\ClearBlockEngine\bin\Debug"      $(OutDir) *.dll
 robocopy "$(BLOCO_HOME)\ClearInputLibrary\bin\Debug"       $(OutDir) *.dll
 robocopy "$(BLOCO_HOME)\ClearModelSDK\bin\Debug"          $(OutDir) *.dll
 if errorlevel 4 goto BuildEventFailed 
