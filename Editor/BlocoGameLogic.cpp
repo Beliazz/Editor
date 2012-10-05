@@ -266,8 +266,11 @@ bool BlocoGameLogicListener::HandleEvent( IEventData const & event )
 	//Set Actor Transform
 	else if ( EvtData_SetActorTransform::sk_EventType == event.VGetEventType() )
 	{
-		const EvtData_SetActorTransform & castEvent = static_cast< const EvtData_SetActorTransform & >( event );
-		m_pGame->VSetActorTransform(castEvent.m_Id, castEvent.m_Mat);
+		const EvtData_SetActorTransform & ed = static_cast< const EvtData_SetActorTransform & >( event );
+		//m_pGame->VSetActorTransform(castEvent.m_Id, castEvent.m_Mat);
+
+		//if (actor)
+			m_pGame->VGetGamePhysics()->VKinematicMove(ed.m_Mat,ed.m_Id);
 	}
 
 	//Set Actor Transform

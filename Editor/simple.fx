@@ -34,6 +34,7 @@ struct PSINPUT
 	float4 worldPos : POS1;
 	float3 normal   : NORMAL0;
 	float2 texCoord : TEXCOORD0;
+	float4 color    : COLOR1;
 	float3 CameraView : CAMERAVIEW0;
 };
 

@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Editor", "Editor\Editor.vcxproj", "{F2FFA989-F082-429E-8B1D-5749AA24C10C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ClearInputLibrary", "..\ClearInputLibrary\source\ClearInputLibrary\RAWInput.vcxproj", "{DF6F21EC-0AC8-4422-9C32-83D307725896}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BlocoCore", "..\BlocoCore\source\BlocoCore\BlocoCore.vcxproj", "{6CC2B61E-071E-453E-8DA4-C98AB5C2CCD8}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ClearPhysicsSDK", "..\ClearPhysicsSDK\source\ClearPhysicsSDK\ClearPhysicsSDK.vcxproj", "{3D87B51D-C85B-4BD8-8752-796DDCC3F00A}"
@@ -16,6 +14,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bloco", "..\Bloco\source\Bloco\Bloco.vcxproj", "{A42A748D-DF19-48FA-85AD-CBF6A3E9DDD8}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ClearGraphicsLibrary", "..\ClearGraphicsLibrary\source\ClearGraphicsLibrary\ClearGraphicsLibrary.vcxproj", "{F3F43BE6-7F5B-4A68-BA7D-361938A425E6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ModelConverter", "..\ModelConverter\ModelConverter\ModelConverter.vcxproj", "{944578DA-3F8E-4943-AFBA-C5FAB86D51D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,14 +33,6 @@ Global
 		{F2FFA989-F082-429E-8B1D-5749AA24C10C}.PCH Debug|Win32.Build.0 = Debug|Win32
 		{F2FFA989-F082-429E-8B1D-5749AA24C10C}.Release|Win32.ActiveCfg = Release|Win32
 		{F2FFA989-F082-429E-8B1D-5749AA24C10C}.Release|Win32.Build.0 = Release|Win32
-		{DF6F21EC-0AC8-4422-9C32-83D307725896}.Debug|Win32.ActiveCfg = Debug|Win32
-		{DF6F21EC-0AC8-4422-9C32-83D307725896}.Debug|Win32.Build.0 = Debug|Win32
-		{DF6F21EC-0AC8-4422-9C32-83D307725896}.Lib|Win32.ActiveCfg = Release|Win32
-		{DF6F21EC-0AC8-4422-9C32-83D307725896}.Lib|Win32.Build.0 = Release|Win32
-		{DF6F21EC-0AC8-4422-9C32-83D307725896}.PCH Debug|Win32.ActiveCfg = Debug|Win32
-		{DF6F21EC-0AC8-4422-9C32-83D307725896}.PCH Debug|Win32.Build.0 = Debug|Win32
-		{DF6F21EC-0AC8-4422-9C32-83D307725896}.Release|Win32.ActiveCfg = Release|Win32
-		{DF6F21EC-0AC8-4422-9C32-83D307725896}.Release|Win32.Build.0 = Release|Win32
 		{6CC2B61E-071E-453E-8DA4-C98AB5C2CCD8}.Debug|Win32.ActiveCfg = Debug|Win32
 		{6CC2B61E-071E-453E-8DA4-C98AB5C2CCD8}.Debug|Win32.Build.0 = Debug|Win32
 		{6CC2B61E-071E-453E-8DA4-C98AB5C2CCD8}.Lib|Win32.ActiveCfg = Release|Win32
@@ -89,6 +81,14 @@ Global
 		{F3F43BE6-7F5B-4A68-BA7D-361938A425E6}.PCH Debug|Win32.Build.0 = PCH Debug|Win32
 		{F3F43BE6-7F5B-4A68-BA7D-361938A425E6}.Release|Win32.ActiveCfg = Release|Win32
 		{F3F43BE6-7F5B-4A68-BA7D-361938A425E6}.Release|Win32.Build.0 = Release|Win32
+		{944578DA-3F8E-4943-AFBA-C5FAB86D51D4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{944578DA-3F8E-4943-AFBA-C5FAB86D51D4}.Debug|Win32.Build.0 = Debug|Win32
+		{944578DA-3F8E-4943-AFBA-C5FAB86D51D4}.Lib|Win32.ActiveCfg = Release|Win32
+		{944578DA-3F8E-4943-AFBA-C5FAB86D51D4}.Lib|Win32.Build.0 = Release|Win32
+		{944578DA-3F8E-4943-AFBA-C5FAB86D51D4}.PCH Debug|Win32.ActiveCfg = Debug|Win32
+		{944578DA-3F8E-4943-AFBA-C5FAB86D51D4}.PCH Debug|Win32.Build.0 = Debug|Win32
+		{944578DA-3F8E-4943-AFBA-C5FAB86D51D4}.Release|Win32.ActiveCfg = Release|Win32
+		{944578DA-3F8E-4943-AFBA-C5FAB86D51D4}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

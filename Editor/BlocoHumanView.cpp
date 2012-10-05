@@ -84,7 +84,7 @@ void BlocoHumanView::VRenderText()
 
 void BlocoHumanView::VRenderDiagnostic()
 {
-	//g_pApp->m_pGame->VGetGamePhysics()->VRenderDiagnostics(m_pScene.get());
+	g_pApp->m_pGame->VGetGamePhysics()->VRenderDiagnostics(m_pScene.get());
 }
 
 void BlocoHumanView::SetActorTransform( ActorId id, Mat mat )
@@ -114,8 +114,11 @@ bool BlocoGameViewListener::HandleEvent( IEventData const & event )
 			const EvtData_New_Actor & ed = static_cast< const EvtData_New_Actor & >( event );
 
 			shared_ptr<SceneNode> node = ed.m_pActorParams->VCreateSceneNode(m_pView->m_pScene);
-			m_pView->m_pScene->VAddChild(ed.m_pActorParams->m_Id, node);
-			node->VOnRestore(&(*(m_pView->m_pScene)));
+			if (node)
+			{
+				m_pView->m_pScene->VAddChild(ed.m_pActorParams->m_Id, node);
+				node->VOnRestore(&(*(m_pView->m_pScene)));
+			}
 		}
 
 	//Set Actor Transform
