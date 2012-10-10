@@ -56,6 +56,12 @@ void BlocoHumanView::VOnAttach(GameViewId vid, optional<ActorId> aid)
 void BlocoHumanView::BuildInitialScene()
 {
 	VPushElement(m_pScene);
+
+	m_pInfoLabel = new Label(cgl::CD3D11EffectFromFile::Create("Label.fxc"), 20, 20, 400, g_pApp->GetWindowHeight() - 40);
+	if(!CGL_RESTORE(m_pInfoLabel))
+	{
+		return;
+	}
 }
 
 void BlocoHumanView::VOnUpdate( int deltaMilliseconds )
@@ -67,19 +73,33 @@ void BlocoHumanView::VOnUpdate( int deltaMilliseconds )
 	safeTriggerEvent( tickEvent );
 
 	m_controller->OnUpdate(deltaMilliseconds);
+
+	cgl::CGLTimerReport report;
+	std::stringstream stream;
+	stream.precision(2);
+	char buffer[64];
+	for (auto it = report->begin(); it != report->end(); it++)
+	{
+		sprintf(buffer, "%s: %.2f ms", it->first.c_str(), it->second->get() * 1000);
+		stream << buffer << std::endl;
+	}
+
+	m_pInfoLabel->SetText(stream.str());
 }
 
 void BlocoHumanView::VRenderText()
 {
-	stringstream ss;
+// 	stringstream ss;
+// 
+// 	ss << "FPS:            " << (int) g_pApp->GetFPS()<< "\n";
+// 	ss << "DrawTime:   "	 << (float) g_pApp->GetDrawTime()  * 1000 << "\n";
+// 	ss << "UpdateTime: "	 << (float) g_pApp->GetUpdateTime()* 1000 << "\n";
+// 	ss << "IdleTime:       " << (float) g_pApp->GetIdleTime()* 1000 << "\r";
+// 
+// 	m_pFont->VRender(m_pRenderer->GetContext(), ss.str(), 18, Vec(g_pApp->GetScreenWidth() - 400, 15), Col(1, 1, 1, 1));
+// 	
+	m_pInfoLabel->Render();
 
-	ss << "FPS:            " << (int) g_pApp->GetFPS()<< "\n";
-
-	ss << "DrawTime:   " << (float) g_pApp->GetDrawTime()  * 1000 << "\n";
-	ss << "UpdateTime: " << (float) g_pApp->GetUpdateTime()* 1000 << "\n";
-	ss << "IdleTime:       " << (float) g_pApp->GetIdleTime()* 1000 << "\r";
-
-	m_pFont->VRender(m_pRenderer->GetContext(), ss.str(), 18, Vec(g_pApp->GetScreenWidth() - 400, 15), Col(1, 1, 1, 1));
 }
 
 void BlocoHumanView::VRenderDiagnostic()

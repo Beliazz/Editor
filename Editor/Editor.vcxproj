@@ -35,8 +35,8 @@
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
-    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DXSDK_DIR)\Include;$(DXSDK_DIR)\Samples\C++\Effects11\Inc;$(BLOCO_HOME)\ClearGraphicsLibrary\include;$(BLOCO_HOME)\ClearInputLibrary\include;$(BLOCO_HOME)\ClearModelSDK\include;$(BLOCO_HOME)\TinyXML\include;$(BLOCO_HOME)\BlocoUtility\include;$(BLOCO_HOME)\luaPlus\LuaPlus\Src\;$(BLOCO_HOME)\zlib\include;$(BLOCO_HOME)\ClearEventManager\include;$(BLOCO_HOME)\ClearPhysicsSDK\include;$(BLOCO_HOME)\Bloco\include;$(BLOCO_HOME)\BlocoCore\include;$(BLOCO_HOME)\bullet\include;$(BLOCO_HOME)\FontWrapper\include;$(IncludePath)</IncludePath>
-    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(BLOCO_HOME)\luaPlus\LuaPlus\build2010\bin.vs2010.win32;$(DXSDK_DIR)\Lib\x86\;$(DXSDK_DIR)\Samples\C++\Effects11\Debug;$(DXSDK_DIR)\Samples\C++\DXUT11\Core\Debug;$(DXSDK_DIR)\Samples\C++\DXUT11\Optional\Debug;$(BLOCO_HOME)\Bloco\lib\Debug;$(BLOCO_HOME)\TinyXML\lib;$(BLOCO_HOME)\FontWrapper\lib;$(BLOCO_HOME)\zlib\lib;$(BLOCO_HOME)\ClearModelSDK\lib\Debug;$(BLOCO_HOME)\BlocoUtility\lib\Debug;$(BLOCO_HOME)\BlocoCore\lib\Debug;$(BLOCO_HOME)\ClearPhysicsSDK\lib\Debug;$(BLOCO_HOME)\bullet\lib;$(BLOCO_HOME)\ClearGraphicsLibrary\lib\Debug;$(BLOCO_HOME)\ClearInputLibrary\lib\Debug;$(LibraryPath)</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DXSDK_DIR)\Include;$(DXSDK_DIR)\Samples\C++\Effects11\Inc;$(CBE_HOME)\include;$(BLOCO_HOME)\ClearGraphicsLibrary\include;$(BLOCO_HOME)\ClearInputLibrary\include;$(BLOCO_HOME)\ClearModelSDK\include;$(BLOCO_HOME)\TinyXML\include;$(BLOCO_HOME)\BlocoUtility\include;$(BLOCO_HOME)\luaPlus\LuaPlus\Src\;$(BLOCO_HOME)\zlib\include;$(BLOCO_HOME)\ClearEventManager\include;$(BLOCO_HOME)\ClearPhysicsSDK\include;$(BLOCO_HOME)\Bloco\include;$(BLOCO_HOME)\BlocoCore\include;$(BLOCO_HOME)\bullet\include;$(BLOCO_HOME)\FontWrapper\include;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(CBE_HOME)\lib\debug;$(DXSDK_DIR)\Lib\x86\;$(DXSDK_DIR)\Samples\C++\Effects11\Debug;$(DXSDK_DIR)\Samples\C++\DXUT11\Core\Debug;$(DXSDK_DIR)\Samples\C++\DXUT11\Optional\Debug;$(BLOCO_HOME)\luaPlus\LuaPlus\build2010\bin.vs2010.win32;$(BLOCO_HOME)\Bloco\lib\Debug;$(BLOCO_HOME)\TinyXML\lib;$(BLOCO_HOME)\FontWrapper\lib;$(BLOCO_HOME)\zlib\lib;$(BLOCO_HOME)\ClearModelSDK\lib\Debug;$(BLOCO_HOME)\BlocoUtility\lib\Debug;$(BLOCO_HOME)\BlocoCore\lib\Debug;$(BLOCO_HOME)\ClearPhysicsSDK\lib\Debug;$(BLOCO_HOME)\bullet\lib;$(BLOCO_HOME)\ClearGraphicsLibrary\lib\Debug;$(BLOCO_HOME)\ClearInputLibrary\lib\Debug;$(LibraryPath)</LibraryPath>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -47,6 +47,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <MinimalRebuild>true</MinimalRebuild>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -129,6 +130,7 @@ exit 0</Command>
     <ClCompile Include="GeneratedFiles\Release\moc_QRenderThread.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Label.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="RenderThread.cpp" />
   </ItemGroup>
@@ -170,6 +172,7 @@ exit 0</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"   -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB  "-I." "-I.\GeneratedFiles" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I." "-I." "-I." "FileBrowser.h" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
     </CustomBuild>
+    <ClInclude Include="Label.h" />
     <ClInclude Include="main.h" />
     <CustomBuild Include="QRenderThread.h">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>

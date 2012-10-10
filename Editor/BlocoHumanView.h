@@ -11,6 +11,8 @@ private:
 	shared_ptr<CameraNode> m_pCamera;
 	shared_ptr<MovementController> m_controller;
 
+	Label* m_pInfoLabel;
+
 	void VOnAttach(GameViewId vid, optional<ActorId> aid);
 	virtual void VRenderText();
 

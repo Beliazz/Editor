@@ -1,6 +1,8 @@
 #ifndef Main_h__
 #define Main_h__
 
+// fully qualified enum name shit
+#pragma warning(disable: 4482)
 
 //#define RAYCAST_ON_DRAGMOVE
 
@@ -24,8 +26,10 @@
 #include <Bloco.h>
 #pragma comment(lib, "Bloco.lib")
 
+#include "Label.h"
 #include "BlocoHumanView.h"
 #include "BlocoGameLogic.h"
 #include "EditorApp.h"
+
 
 #endif
